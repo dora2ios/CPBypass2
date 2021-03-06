@@ -2,3 +2,4 @@
 .DS_Store
 src/payload.c
 src/CPBypass2
+payload/

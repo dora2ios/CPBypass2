@@ -46,8 +46,9 @@ python module_load.py KPPmodule
 python issue_cmd.py disable_kpp
 ```
 
-- Apply kernel patch on the A9 devices  
+- Apply kernel patch on iOS  
 ```
+dpkg -i jp.dora2ios.cpbypass64_0.0.1_iphoneos-arm.deb
 ./CPBypass2
 ```
 

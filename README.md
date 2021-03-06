@@ -9,8 +9,8 @@ In the near future, this project will be a module of checkra1n. It will enable k
 For this project, Apache License 2.0 is used for the kernel patcher. But, The [syscall payload](https://github.com/dora2-iOS/CPBypass-public/blob/main/kernel/sysent_patch64.c) used for it is based on GPLv3, so if you want to redistribute [it](https://github.com/dora2-iOS/CPBypass2/blob/main/src/payload.o), you need to clarify the source code of the syscall payload.  
 
 ## File details  
-`module/KPPmodule`: A checkra1n module that disables KPP for 16k devices based on [xnuspy](https://github.com/jsherman212/xnuspy/tree/master/module/el3) by Justin Sherman  
-`src/`: A kernel patcher for KPP disabled devices.  
+`module/KPPmodule` A checkra1n module that disables KPP for 16k devices based on [xnuspy](https://github.com/jsherman212/xnuspy/tree/master/module/el3) by Justin Sherman  
+`src/` A kernel patcher for KPP disabled devices.  
 
 ## Support  
 Currently it only supports iOS 14 A9 devices (with KPP disabled).  
@@ -44,7 +44,6 @@ make
 cd module/
 python module_load.py KPPmodule
 python issue_cmd.py disable_kpp
-
 ```
 
 - Apply kernel patch on the A9 devices  

@@ -32,7 +32,6 @@ offsets_init(void){
     
     /*---- All A9(X) - iOS 14 kernel offsets (Maybe) ----*/
     if (strcmp(u.version, "Darwin Kernel Version 20.0.0: Fri Aug 28 23:05:58 PDT 2020; root:xnu-7195.0.46~9/RELEASE_ARM64_S8000") == 0 ||
-        strcmp(u.version, "Darwin Kernel Version 20.0.0: Fri Aug 28 23:05:58 PDT 2020; root:xnu-7195.0.46~9/RELEASE_ARM64_S8000") == 0 ||
         strcmp(u.version, "Darwin Kernel Version 20.0.0: Wed Sep 30 03:24:41 PDT 2020; root:xnu-7195.0.46~41/RELEASE_ARM64_S8000") == 0) {
         /*---- S8000 18A373 [14.0] ----*/
         /*---- S8000 18A393 [14.0.1] ----*/

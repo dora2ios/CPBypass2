@@ -47,7 +47,7 @@ python issue_cmd.py disable_kpp
 
 - Install CPBypass2 Tweak on iOS (Mobile Terminal or SSH)  
 ```
-dpkg -i jp.dora2ios.cpbypass64_0.0.1_iphoneos-arm.deb
+dpkg -i jp.dora2ios.cpbypass64_1.0.1_iphoneos-arm.deb
 ```
 
 - Apply kernel patch on iOS (Mobile Terminal or SSH)  

@@ -1191,7 +1191,21 @@ bypass_jb_detection(void){
 
 int
 main(void) {
+    
+    printf("CPBypass2 v1.0.1 made by @dora2ios\n");
+    
     kern_return_t ret;
+    int str;
+    printf("!! WARNING !!\n");
+    printf("CPBypass2 apply patches actual pages protected with KPP/KTRR lockdown.\n");
+    printf("If KPP is not disabled, the device will kernel panic after a few minutes.\n");
+    printf("KPP really disabled on this device? If you want to continue, type \"Y\" and press <enter> key.\n");
+    printf(">> ");
+    
+    str = getchar();
+    if(str != 0x59){
+        return -1;
+    }
     
     if(init_tfp0() == KERN_SUCCESS) {
         printf("tfp0: 0x%" PRIX32 "\n", tfp0);
@@ -1208,4 +1222,6 @@ main(void) {
         }
         mach_port_deallocate(mach_task_self(), tfp0);
     }
+    
+    return 0;
 }

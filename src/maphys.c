@@ -1038,7 +1038,7 @@ uint64_t _sysent_stat;
 uint64_t _copyinstr;
 uint64_t _IOLog;
 uint64_t _strcmp;
-uint64_t bootargs_store;
+//uint64_t bootargs_store;
 uint64_t _payload_base;
 
 /* kvtophys: From KTRW
@@ -1162,7 +1162,7 @@ bypass_jb_detection(void){
     ret = KERN_FAILURE;
     if(offsets_init() == KERN_SUCCESS){
         
-        /*--- Not used for KPP devices ---*/
+        /*--- Not used for KPP devices ---*
         uint64_t BootArgs;
         uint64_t virtBase;
         uint64_t physBase;
@@ -1172,7 +1172,7 @@ bypass_jb_detection(void){
         kread_addr(BootArgs + 0x10, &physBase);
         printf("BootArgs.virtBase: 0x%016llx\n", virtBase);
         printf("BootArgs.physBase: 0x%016llx\n", physBase);
-        /*--- END ---*/
+         *--- END ---*/
         
         /* TTBR1_EL1:
          *  _kernel_pmap+0:  ttbr1_el1 + gVirtBase + gPhysBase

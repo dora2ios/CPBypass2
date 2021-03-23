@@ -83,6 +83,16 @@ offsets_init(void){
         _IOLog              = OFFSET(0xfffffff007c23e08);
         _strcmp             = OFFSET(0xfffffff00771ba30);
         _payload_base       = OFFSET(0xfffffff007596000);
+    } else if (strcmp(u.version, "Darwin Kernel Version 18.7.0: Fri Jun 21 22:24:15 PDT 2019; root:xnu-4903.270.47~7/RELEASE_ARM64_S8000") == 0) {
+        /*---- S8000 16G77 [12.4] ----*/ // thanks @brendonjkding
+        //bootargs_store      = OFFSET(0xFFFFFFF007095E10);
+        ml_phys_read_data   = OFFSET(0xFFFFFFF0071BADEC);
+        ml_phys_write_data  = OFFSET(0xFFFFFFF0071BB04C);
+        _sysent_stat        = OFFSET(0xfffffff007080bb0);
+        _copyinstr          = OFFSET(0xFFFFFFF0071B4C64);
+        _IOLog              = OFFSET(0xFFFFFFF0075258F0);
+        _strcmp             = OFFSET(0xFFFFFFF0071982D8);
+        _payload_base       = OFFSET(0xfffffff0075bf6d0);
     } else {
         printf("offsets are not set\n");
         return ret;

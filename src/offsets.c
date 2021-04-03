@@ -33,9 +33,7 @@ offsets_init(void){
     /*---- All A9(X) - iOS 14 kernel offsets (Maybe) ----*/
     if (strcmp(u.version, "Darwin Kernel Version 20.0.0: Fri Aug 28 23:05:58 PDT 2020; root:xnu-7195.0.46~9/RELEASE_ARM64_S8000") == 0 ||
         strcmp(u.version, "Darwin Kernel Version 20.0.0: Wed Sep 30 03:24:41 PDT 2020; root:xnu-7195.0.46~41/RELEASE_ARM64_S8000") == 0) {
-        /*---- S8000 18A373 [14.0] ----*/
-        /*---- S8000 18A393 [14.0.1] ----*/
-        /*---- S8000 18A8395 [14.1] ----*/
+        /*---- S8000 18A373 - 18A8395 [14.0 - 14.1] ----*/
         //bootargs_store      = OFFSET(0xfffffff0070ec000);
         ml_phys_read_data   = OFFSET(0xfffffff00723a58c);
         ml_phys_write_data  = OFFSET(0xfffffff00723a7ac);
@@ -65,7 +63,7 @@ offsets_init(void){
         _strcmp             = OFFSET(0xfffffff007220afc);
         _payload_base       = OFFSET(0xfffffff0077436d0);
     } else if (strcmp(u.version, "Darwin Kernel Version 20.3.0: Tue Jan  5 18:34:47 PST 2021; root:xnu-7195.80.35~2/RELEASE_ARM64_S8000") == 0) {
-        /*---- S8000 18D52 [14.4] ----*/
+        /*---- S8000 18D52 - 18D70 [14.4 - 14.4.2] ----*/
         //bootargs_store      = OFFSET(0xfffffff0070f8800);
         ml_phys_read_data   = OFFSET(0xfffffff007247798);
         ml_phys_write_data  = OFFSET(0xfffffff0072479b8);

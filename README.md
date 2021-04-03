@@ -16,7 +16,7 @@ For this project, Apache License 2.0 is used for the kernel patcher. But, The [s
 Currently it only supports iOS 14 A9 devices (with KPP disabled).  
 - Support device Lists  
 ```
-A9(X): iOS 14.0 - 14.4 (RELEASE version only)
+A9(X): iOS 14.0 - 14.4.2 (RELEASE version only)
 ```
 
 ## Build  
